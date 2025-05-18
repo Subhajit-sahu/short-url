@@ -33,7 +33,8 @@ app.get("/url/:shortId",async (req,res) => {
     res.redirect(entry.redirectUrl);
 })
 
-connectToMongoDB('mongodb://localhost:27017/short-url')
+
+connectToMongoDB(process.env.MONGODB_URI)
 .then(() => console.log("Connected to mongodb"))
 .catch(() => console.log("Error in connection"));
 

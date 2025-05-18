@@ -10,7 +10,7 @@ let handleGenerateShortURL = async(req,res) => {
         redirectUrl : body.url,
         visitHistory : [],
     })
-    let allUrls = await URL.find({});
+    // let allUrls = await URL.find({});
     res.redirect('/?shortId=' + shortID);
     // res.render("home.ejs",{ id : shortID,urls : allUrls});
     // return res.json({ id : shortID});
